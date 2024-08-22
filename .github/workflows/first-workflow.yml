@@ -47,7 +47,7 @@ jobs:
               run: ls -l
 
             - name: Read File
-              run: cat dragon-file
+              run: cat dragon.txt
 
             - name: checkout repo files
               run: ls
