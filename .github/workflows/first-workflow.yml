@@ -3,7 +3,7 @@ on:
     push:
     workflow_dispatch:
 jobs:
-    hamada:
+    first-job:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
@@ -12,20 +12,20 @@ jobs:
             - name: welcome msg
               run: echo "hello data eng"
 
-            - name: list files
-              run: 
-                |
-                chmod +x script.sh
-                ./script.sh
             - name: install cowsay program
               run: sudo apt-get install cowsay -y
 
             - name: execute cowsay cmd
               run: cowsay -f dragon "Run for cover, iam a Dragon....RAWR" >> dragon.txt
-
+    test_job:
+        runs-on: ubuntu-latest
+        steps:
             - name: Test File exists
               run: grep -i "dragon" dragon.txt
             
+    deploy-job:
+        runs-on: ubuntu-latest
+        steps:
             - name: Read File
               run: cat dragon.txt
 
