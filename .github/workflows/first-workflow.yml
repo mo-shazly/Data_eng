@@ -29,7 +29,7 @@ jobs:
 
             - uses: actions/download-artifact@v4
               with:
-               path: dragon-file
+               name: dragon-file
 
             - name: Test File exists
               run: ls
@@ -41,13 +41,13 @@ jobs:
 
             - uses: actions/download-artifact@v4
               with:
-               path: dragon-file
+               name: dragon-file
 
             - name: list
               run: ls -l
 
             - name: Read File
-              run: zcat dragon-file
+              run: cat dragon-file
 
             - name: checkout repo files
               run: ls
