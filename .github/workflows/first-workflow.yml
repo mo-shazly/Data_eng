@@ -42,9 +42,6 @@ jobs:
             - uses: actions/download-artifact@v4
               with:
                path: dragon-file
-            
-            - name: unzip dir
-              run: unzip dragon-file.zip
 
             - name: Read File
               run: cat dragon.txt
