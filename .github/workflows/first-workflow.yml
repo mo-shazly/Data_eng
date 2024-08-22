@@ -43,8 +43,11 @@ jobs:
               with:
                path: dragon-file
 
+            - name: list
+              run: ls -l
+
             - name: Read File
-              run: cat dragon.txt
+              run: zcat dragon-file
 
             - name: checkout repo files
               run: ls
