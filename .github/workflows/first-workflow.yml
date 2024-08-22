@@ -1,5 +1,7 @@
 name: my first wf
-on: push
+on: 
+    push:
+    workflow_dispatch:
 jobs:
     hamada:
         runs-on: ubuntu-latest
