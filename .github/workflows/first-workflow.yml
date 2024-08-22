@@ -11,7 +11,7 @@ jobs:
 
             - name: welcome msg
               run: echo "hello data eng"
-              
+
             - name: list files
-              run: ls
+              run: ./script.sh
  
