@@ -13,9 +13,22 @@ jobs:
               run: echo "hello data eng"
 
             - name: list files
-              run:
+              run: 
                 |
                 chmod +x script.sh
                 ./script.sh
-                
+            - name: install cowsay program
+              run: sudo apt-get install cowsay -y
+
+            - name: execute cowsay cmd
+              run: cowsay -f dragon "Run for cover, iam a Dragon....RAWR" >> dragon.txt
+
+            - name: Test File exists
+              run: grep -i "dragon" dragon.txt
+            
+            - name: Read File
+              run: cat dragon.txt
+
+            - name: checkout repo files
+              run: ls
  
