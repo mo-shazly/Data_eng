@@ -32,7 +32,7 @@ jobs:
                path: dragon-file
 
             - name: Test File exists
-              run: grep -i "dragon" dragon-file
+              run: grep -i dragon-file
             
     deploy-job:
         needs: [test_job, first-job]
@@ -42,6 +42,9 @@ jobs:
             - uses: actions/download-artifact@v4
               with:
                path: dragon-file
+            
+            - name: unzip dir
+              run: unzip dragon-file
 
             - name: Read File
               run: cat dragon.txt
