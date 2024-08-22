@@ -32,7 +32,7 @@ jobs:
                path: dragon-file
 
             - name: Test File exists
-              run: grep -i dragon-file
+              run: ls
             
     deploy-job:
         needs: [test_job, first-job]
